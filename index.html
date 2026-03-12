@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raymond Orai | The Complete Man | Custom Tailoring</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-charcoal: #1a1a1a;
+            --brand-gold: #c5a059;
+            --brand-red: #d32f2f;
+            --off-white: #fcfcfc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--off-white); color: var(--brand-charcoal); line-height: 1.6; }
+
+        /* --- Header --- */
+        header {
+            background: white; padding: 10px 8%; display: flex; justify-content: space-between; 
+            align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo-area { display: flex; flex-direction: column; }
+        .logo { font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 700; color: var(--brand-red); text-decoration: none; line-height: 1; }
+        .tagline { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 5px; font-weight: 600; color: #555; }
+        .contact-top { font-size: 0.75rem; font-weight: 600; color: #666; margin-top: 4px; }
+        
+        nav a { text-decoration: none; color: var(--brand-charcoal); margin-left: 20px; font-weight: 600; font-size: 0.85rem; }
+
+        /* --- Hero --- */
+        .hero {
+            height: 65vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.pexels.com/photos/3755706/pexels-photo-3755706.jpeg?auto=compress&cs=tinysrgb&w=1260');
+            background-size: cover; background-position: center;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px;
+        }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(1.8rem, 6vw, 3.2rem); }
+
+        /* --- Grid & Cards --- */
+        section { padding: 60px 8%; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: #fff; border: 1px solid #eee; overflow: hidden; text-align: center; padding-bottom: 20px; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 300px; object-fit: cover; }
+
+        /* --- Contact Section (Wapas add kiya gaya) --- */
+        .contact-section { background: #f4f4f4; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
+        .contact-form { display: flex; flex-direction: column; gap: 15px; }
+        .contact-form input, .contact-form textarea { padding: 12px; border: 1px solid #ccc; font-family: inherit; width: 100%; }
+        .submit-btn { background: var(--brand-charcoal); color: white; padding: 15px; border: none; font-weight: 700; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
+        .submit-btn:hover { background: var(--brand-gold); }
+
+        /* --- Floating Buttons --- */
+        .floating-container { position: fixed; bottom: 25px; right: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 9999; }
+        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .whatsapp-float { background: #25D366; }
+        .call-float { background: #007bff; }
+        .float-btn svg { width: 28px; height: 28px; fill: white; }
+
+        @media (max-width: 768px) {
+            .contact-top, nav { display: none; }
+            section { padding: 40px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <a href="#" class="logo">Raymond</a>
+            <span class="tagline">The Complete Man</span>
+            <div class="contact-top">ORAI | 10 AM - 8 PM | +91 7302301827</div>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>The Master's Touch</h1>
+            <p>Premium Bespoke Tailoring in the heart of Orai.</p>
+            <br>
+            <a href="https://wa.me/917302301827" style="background:var(--brand-gold); color:white; padding:12px 25px; text-decoration:none; font-weight:600;">BOOK APPOINTMENT</a>
+        </section>
+
+        <section id="services">
+            <h2 style="text-align: center; margin-bottom: 40px; font-family: 'Cinzel';">Our Expertise</h2>
+            <div class="gallery-grid">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/13444265/pexels-photo-13444265.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Suits">
+                    <h3 style="margin-top:15px">Wedding Suits</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/3321516/pexels-photo-3321516.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Ethnic">
+                    <h3 style="margin-top:15px">Royal Ethnic</h3>
+                </div>
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/671607/pexels-photo-671607.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Fitting">
+                    <h3 style="margin-top:15px">Perfect Fitting</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div>
+                <h2 style="font-family:'Cinzel'; margin-bottom:15px;">Contact Us</h2>
+                <p style="margin-bottom:20px;">Apne suit ke liye inquiry karein ya appointment fix karein.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Aapka Naam" required>
+                    <input type="tel" placeholder="Mobile Number" required>
+                    <textarea rows="4" placeholder="Aapko kya silwana hai?"></textarea>
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </div>
+            <div>
+                <h3 style="font-family:'Cinzel'; margin-bottom:15px;">Visit Our Showroom</h3>
+                <p>📍 Auraiya Road, Orai, Uttar Pradesh</p>
+                <p>📞 +91 7302301827</p>
+                <p>⏰ 10:00 AM - 8:00 PM (Everyday)</p>
+                <br>
+                <a href="https://maps.google.com/?q=Raymond+Orai+Auraiya+Road" target="_blank" style="color:var(--brand-red); font-weight:700; text-decoration:none;">VIEW ON GOOGLE MAPS →</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-container">
+        <a href="https://wa.me/917302301827" class="float-btn whatsapp-float"><svg viewBox="0 0 24 24"><path d="M12.031 6.172c-2.335 0-4.241 1.906-4.241 4.241 0 .736.191 1.444.559 2.062L7.69 15.19l2.812-.731c.594.323 1.259.494 1.938.494 2.335 0 4.241-1.906 4.241-4.241 0-2.335-1.906-4.241-4.25-4.241zm2.535 5.893c-.1.277-.588.547-.812.583-.224.037-.435.056-.703-.028-.268-.084-.576-.214-1.04-.411-.536-.224-1.12-.56-1.503-1.003-.383-.443-.597-.933-.615-1.446-.019-.513.149-.755.289-.904.14-.149.308-.186.411-.186.103 0 .205.009.299.014.093.005.214-.037.336.252.121.289.421 1.026.458 1.1.037.075.065.159.01.271-.056.112-.084.186-.168.289-.084.103-.177.224-.252.308-.084.084-.177.177-.075.355.103.177.458.755.98 1.222.672.607 1.241.793 1.418.877.177.084.28.065.383-.056.103-.121.439-.513.551-.69.112-.177.224-.149.383-.093.159.056 1.008.476 1.185.565.177.089.294.131.336.205.042.075.042.43-.058.705z"/></svg></a>
+        <a href="tel:+917302301827" class="float-btn call-float"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+    </div>
+
+    <footer style="background:#111; color:#444; text-align:center; padding:20px; font-size:0.8rem;">
+        © 2024 Raymond Orai | All Rights Reserved.
+    </footer>
+
+</body>
+</html>
